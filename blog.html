@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#e6ebe8" />
+		<meta name="color-scheme" content="light" />
+		<title>Blog — Connor Barrett</title>
+		<meta name="description" content="Notes on software, design, and building products." />
+		<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+		<link href="css/webflow.css" rel="stylesheet" type="text/css" />
+		<link href="css/connor-freelance-portfolio-23-24.webflow.css" rel="stylesheet" type="text/css" />
+		<link href="css/light-theme.css?v=blog-cms" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			WebFont.load({
+				google: { families: ['Manrope:200,300,400,500'] },
+			});
+		</script>
+		<link href="images/favicon.png" rel="shortcut icon" type="image/png" />
+		<link href="images/favicon.png" rel="apple-touch-icon" />
+	</head>
+	<body class="body">
+		<div class="page-wrapper">
+			<nav class="navigation">
+				<div class="container navigation w-container">
+					<a href="index.html" class="logo-link-block w-nav-brand" aria-label="Connor Barrett - Home">
+						<img src="images/Logo.svg" loading="lazy" alt="Connor Barrett Logo" class="logo" />
+					</a>
+					<div class="nav-quote-wrapper" aria-live="polite">
+						<blockquote id="nav-quote" class="nav-quote">
+							<p id="nav-quote-text" class="nav-quote-text"></p>
+							<cite id="nav-quote-author" class="nav-quote-author"></cite>
+						</blockquote>
+					</div>
+					<a href="index.html#thoughts-section" class="bio-nav-back">← Blog</a>
+				</div>
+			</nav>
+
+			<section class="work-section dyk-section blog-post-section">
+				<div class="container work-grid home w-container">
+					<div class="w-layout-grid about-1-2-grid">
+						<div class="work-section-wrapper">
+							<div class="work-content-wrapper">
+								<h1 class="heading-2">Blog.</h1>
+								<p class="paragraph-2">Notes on software, design, and building products.</p>
+							</div>
+						</div>
+						<div class="work-wrapper">
+							<article class="blog-post" id="blog-post"></article>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="js/quotes.js" type="text/javascript"></script>
+		<script src="js/blog.js" type="text/javascript"></script>
+		<script>
+			SiteBlog.renderPost(document.getElementById('blog-post'));
+		</script>
+	</body>
+</html>

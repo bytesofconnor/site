@@ -1,0 +1,12 @@
+{
+  "name": "flowconnor-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-posts.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.12"
+  }
+}

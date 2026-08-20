@@ -199,6 +199,56 @@ const quotes = [
     "\"Keep your face always toward the sunshine—and shadows will fall behind you.\" — Walt Whitman",
 ];
 
+const natureQuotes = [
+    "\"Nature does not hurry, yet everything is accomplished.\" — Lao Tzu",
+    "\"Be like water.\" — Lao Tzu",
+    "\"Muddy water is best cleared by leaving it alone.\" — Alan Watts",
+    "\"Look deep into nature, and then you will understand everything better.\" — Albert Einstein",
+    "\"In every walk with nature one receives far more than he seeks.\" — John Muir",
+    "\"The earth has music for those who listen.\" — George Santayana",
+    "\"To sit in the shade on a fine day and look upon verdure is the most perfect refreshment.\" — Jane Austen",
+    "\"Nature is not a place to visit. It is home.\" — Gary Snyder",
+    "\"Colors are the smiles of nature.\" — Leigh Hunt",
+    "\"Study nature, love nature, stay close to nature. It will never fail you.\" — Frank Lloyd Wright",
+    "\"The poetry of the earth is never dead.\" — John Keats",
+    "\"Heaven is under our feet as well as over our heads.\" — Henry David Thoreau",
+    "\"To forget how to dig the earth and to tend the soil is to forget ourselves.\" — Mahatma Gandhi",
+    "\"We are made of starstuff.\" — Carl Sagan",
+    "\"The clearest way into the Universe is through a forest wilderness.\" — John Muir",
+    "\"Adopt the pace of nature: her secret is patience.\" — Ralph Waldo Emerson",
+    "\"Nature always wears the colors of the spirit.\" — Ralph Waldo Emerson",
+    "\"Just living is not enough... one must have sunshine, freedom, and a little flower.\" — Hans Christian Andersen",
+    "\"I go to nature to be soothed and healed, and to have my senses put in order.\" — John Burroughs",
+    "\"Wilderness is not a luxury but a necessity of the human spirit.\" — Edward Abbey",
+    "\"The goal of life is to make your heartbeat match the beat of the universe, to match your nature with Nature.\" — Joseph Campbell",
+    "\"In nature, nothing is perfect and everything is perfect. Trees can be contorted, bent in weird ways, and they're still beautiful.\" — Alice Walker",
+    "\"Nature is painting for us, day after day, pictures of infinite beauty if only we have the eyes to see them.\" — John Ruskin",
+    "\"The sea, once it casts its spell, holds one in its net of wonder forever.\" — Jacques Yves Cousteau",
+    "\"Look at the stars. See their beauty. And in that beauty, see yourself.\" — Draya Mooney",
+    "\"I felt my lungs inflate with the onrush of scenery—air, mountains, trees, people. I thought, 'This is what it is to be happy.'\" — Sylvia Plath",
+    "\"The sun does not shine for a few trees and flowers, but for the wide world's joy.\" — Henry Ward Beecher",
+    "\"There is a pleasure in the pathless woods, There is a rapture on the lonely shore.\" — Lord Byron",
+    "\"Keep close to Nature's heart... and break clear away, once in a while, and climb a mountain or spend a week in the woods. Wash your spirit clean.\" — John Muir",
+    "\"Nature is the art of God.\" — Dante Alighieri",
+    "\"My soul can find no staircase to Heaven unless it be through Earth's loveliness.\" — Michelangelo",
+    "\"We do not inherit the earth from our ancestors, we borrow it from our children.\" — Native American Proverb",
+    "\"The mountains are calling and I must go.\" — John Muir",
+    "\"The silence of nature is very real. It surrounds you... you can feel it.\" — Ted Trueblood",
+    "\"The best remedy for those who are afraid, lonely or unhappy is to go outside.\" — Anne Frank",
+    "\"Let the rain kiss you. Let the rain beat upon your head with silver liquid drops. Let the rain sing you a lullaby.\" — Langston Hughes",
+    "\"The earth laughs in flowers.\" — Ralph Waldo Emerson",
+    "\"If you wish to know the divine, feel the wind on your face and the warm sun on your hand.\" — Buddha",
+    "\"The morning breeze has secrets to tell you. Do not go back to sleep.\" — Rumi",
+    "\"Live in each season as it passes; breathe the air, drink the drink, taste the fruit, and resign yourself to the influence of the earth.\" — Henry David Thoreau",
+    "\"Every flower is a soul blossoming in nature.\" — Gerard De Nerval",
+    "\"Not just beautiful, though—the stars are like the trees in the forest, alive and breathing. And they're watching me.\" — Haruki Murakami",
+    "\"For most of history, man has had to fight nature to survive; in this century he is beginning to realize that, in order to survive, he must protect it.\" — Jacques-Yves Cousteau",
+    "\"If you truly love nature, you will find beauty everywhere.\" — Vincent Van Gogh",
+    "\"To me, a lush carpet of pine needles or spongy grass is more welcome than the most luxurious Persian rug.\" — Helen Keller",
+    "\"What a strange thing! to be alive beneath cherry blossoms.\" — Kobayashi Issa",
+    "\"Nothing is softer or more flexible than water, yet nothing can resist it.\" — Lao Tzu",
+];
+
 function parseQuoteEntry(entry) {
     const match = entry.match(/^"(.+)"\s*—\s*(.+)$/);
     if (match) {
@@ -207,13 +257,23 @@ function parseQuoteEntry(entry) {
     return { text: entry.replace(/^"|"$/g, ''), author: '' };
 }
 
+function getQuotePool() {
+    const block = document.getElementById('nav-quote');
+    const pool = block && block.getAttribute('data-quote-pool');
+    if (pool === 'nature') {
+        return natureQuotes;
+    }
+    return quotes;
+}
+
 function renderNavQuote() {
     const block = document.getElementById('nav-quote');
     const textEl = document.getElementById('nav-quote-text');
     const authorEl = document.getElementById('nav-quote-author');
-    if (!textEl || typeof quotes === 'undefined' || !quotes.length) return;
+    const pool = getQuotePool();
+    if (!textEl || !pool.length) return;
 
-    const picked = parseQuoteEntry(quotes[Math.floor(Math.random() * quotes.length)]);
+    const picked = parseQuoteEntry(pool[Math.floor(Math.random() * pool.length)]);
     textEl.textContent = picked.text;
     if (authorEl) {
         authorEl.textContent = picked.author;
