@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: flowconnor/site
+  repo: bytesofconnor/site
   branch: main
 
 site_url: https://flowconnor.dev
