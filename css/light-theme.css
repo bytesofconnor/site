@@ -498,7 +498,7 @@ nav.navigation,
 }
 
 #home-section .hero-image-wrapper.hero-image-stack > .hero-image-stacked:hover {
-  filter: saturate(1.05) contrast(1.06) brightness(1.03);
+  filter: invert(1);
   transform: scale(1.05);
 }
 
@@ -913,10 +913,30 @@ nav.navigation,
   letter-spacing: 0.08em;
 }
 
+#technical-skills-section .pricing-grid {
+  align-items: stretch;
+}
+
+#technical-skills-section .pricing-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+#technical-skills-section .engineering-price-info,
+#technical-skills-section .ux-price-info,
+#technical-skills-section .dev-pricing-title {
+  min-height: 1.4em;
+  line-height: 1.4;
+}
+
 #technical-skills-section .price-tag {
-  font-size: 28px;
+  min-height: calc(1.15em * 2);
+  font-size: 26px;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.03em;
   color: var(--text-primary);
 }
@@ -1950,4 +1970,38 @@ blockquote {
 
 .bio-page .bio-reading-list .article-entry:hover {
   background-color: rgba(26, 40, 44, 0.035) !important;
+}
+
+/* Reverse RGB on image hover */
+img {
+  transition: filter 0.35s ease, opacity 0.35s ease;
+}
+
+img:hover,
+.clean-about-image-container:hover .clean-about-image,
+.clean-about-image:hover,
+.about-top-image:hover,
+.about-image-left:hover,
+.about-image-right:hover,
+.contact-left-block:hover img,
+.contact-right-block:hover img,
+.contact-image-left:hover,
+.contact-image-right:hover,
+.contact-image-left-bg:hover,
+.contact-image-right-bg:hover,
+.hero-image:hover,
+.hero-image-stacked:hover,
+#home-section .hero-avatar-link:hover .hero-avatar,
+.hero-avatar:hover,
+.logo-link-block:hover .logo,
+.logo:hover {
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: invert(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  img {
+    transition: none;
+  }
 }
