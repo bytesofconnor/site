@@ -16,9 +16,9 @@ Personal portfolio website built with vanilla HTML, CSS, and JavaScript. Origina
 Posts are Markdown files in `posts/`. You don’t need Cursor to publish.
 
 1. Open [flowconnor.dev/admin/](https://flowconnor.dev/admin/)
-2. Choose **Sign in with Token**
-3. Create a [GitHub personal access token](https://github.com/settings/personal-access-tokens) with **Contents: Read and write** on `bytesofconnor/site`
-4. Paste the token, write the post, publish
+2. Sign in with an access token
+3. Create a [classic GitHub token](https://github.com/settings/tokens/new?description=flowconnor-cms&scopes=public_repo) with the `public_repo` scope
+4. Paste it, write, publish
 
 That commits a Markdown file. Vercel rebuilds and the post shows up under **Blog.** Drafts stay off the site until you uncheck Draft.
 

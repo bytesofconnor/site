@@ -4,6 +4,8 @@ backend:
   name: github
   repo: bytesofconnor/site
   branch: main
+  auth_methods:
+    - token
 
 site_url: https://flowconnor.dev
 display_url: https://flowconnor.dev
