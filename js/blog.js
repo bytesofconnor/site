@@ -24,7 +24,7 @@
 	}
 
 	function postUrl(slug) {
-		return 'blog.html?p=' + encodeURIComponent(slug);
+		return 'blog/' + encodeURIComponent(slug) + '/';
 	}
 
 	async function loadPosts() {
@@ -103,6 +103,12 @@
 
 		document.title = post.title + ' — Connor Barrett';
 		const date = formatDate(post.date);
+		const shareUrl = new URL(postUrl(post.slug), window.location.origin).href;
+		const tweet =
+			'https://x.com/intent/tweet?text=' +
+			encodeURIComponent(post.title) +
+			'&url=' +
+			encodeURIComponent(shareUrl);
 		root.innerHTML =
 			'<p class="blog-post-date">' +
 			escapeHtml(date) +
@@ -110,9 +116,46 @@
 			'<h1 class="blog-post-title">' +
 			escapeHtml(post.title) +
 			'</h1>' +
+			'<p class="blog-post-share">' +
+			'<button type="button" class="blog-share-copy" data-copy-post="' +
+			escapeHtml(shareUrl) +
+			'">Copy link</button>' +
+			'<span class="blog-share-sep" aria-hidden="true">·</span>' +
+			'<a class="blog-share-x" href="' +
+			escapeHtml(tweet) +
+			'" target="_blank" rel="noopener noreferrer">Share on X</a>' +
+			'</p>' +
 			'<div class="blog-prose">' +
 			(post.html || '') +
 			'</div>';
+		bindShare(root);
+	}
+
+	function bindShare(root) {
+		if (!root) return;
+		const url = window.location.href;
+		const titleEl = root.querySelector('.blog-post-title');
+		const title = titleEl ? titleEl.textContent.trim() : document.title;
+		const xLink = root.querySelector('.blog-share-x');
+		if (xLink) {
+			xLink.href =
+				'https://x.com/intent/tweet?text=' +
+				encodeURIComponent(title) +
+				'&url=' +
+				encodeURIComponent(url);
+		}
+		const button = root.querySelector('[data-copy-post]');
+		if (!button || button.dataset.bound === 'true') return;
+		button.dataset.bound = 'true';
+		button.addEventListener('click', function () {
+			const original = button.textContent;
+			navigator.clipboard.writeText(window.location.href).then(function () {
+				button.textContent = 'Copied';
+				window.setTimeout(function () {
+					button.textContent = original;
+				}, 2000);
+			});
+		});
 	}
 
 	function escapeHtml(value) {
@@ -126,5 +169,6 @@
 	window.SiteBlog = {
 		renderList: renderList,
 		renderPost: renderPost,
+		bindShare: bindShare,
 	};
 })();

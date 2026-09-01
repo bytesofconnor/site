@@ -4,6 +4,20 @@
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/blog.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "p",
+          "value": "(?<slug>[^&]+)"
+        }
+      ],
+      "destination": "/blog/:slug/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -1570,6 +1570,40 @@ blockquote {
   color: var(--text-primary);
 }
 
+.blog-post-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 10px;
+  margin: -12px 0 28px;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+}
+
+.blog-share-copy,
+.blog-share-x {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.blog-share-copy:hover,
+.blog-share-x:hover {
+  color: var(--accent-cta);
+}
+
+.blog-share-sep {
+  color: var(--border-strong);
+}
+
 .blog-prose {
   max-width: 62ch;
   color: var(--text-secondary);

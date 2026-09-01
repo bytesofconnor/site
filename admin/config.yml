@@ -25,6 +25,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: date, widget: datetime, time_format: false }
-      - { label: Summary, name: description, widget: text, required: false }
+      - { label: Summary, name: description, widget: text, required: false, hint: "Used as the preview text when the link is pasted into X, iMessage, or Slack." }
+      - { label: Share image, name: image, widget: image, required: false, hint: "Optional. 1200×630 looks right on X. A site photo is used if this is empty." }
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: richtext }
