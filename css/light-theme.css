@@ -436,6 +436,7 @@ nav.navigation,
   object-position: center 35%;
   display: block;
   transform: scale(1.15);
+  filter: invert(1);
 }
 
 #home-section .hero-heading-text {
@@ -492,20 +493,18 @@ nav.navigation,
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: saturate(1) contrast(1.04) brightness(1.02);
+  filter: invert(1) saturate(1) contrast(1.04) brightness(1.02);
   transform: scale(1.05);
   transition: filter 0.35s ease, transform 0.35s ease;
 }
 
 #home-section .hero-image-wrapper.hero-image-stack > .hero-image-stacked:hover {
-  filter: invert(1);
+  filter: saturate(1) contrast(1.04) brightness(1.02);
   transform: scale(1.05);
 }
 
-.hero-image,
-.hero-image:hover {
+.hero-image {
   opacity: 1;
-  filter: none;
   mix-blend-mode: normal;
 }
 
@@ -1426,14 +1425,14 @@ blockquote {
 
 .contact-image-left-bg,
 .contact-image-right-bg {
-  filter: blur(2px) saturate(0.85);
+  filter: invert(1) blur(2px) saturate(0.85);
   mix-blend-mode: normal;
   opacity: 0.55;
 }
 
 .contact-image-left,
 .contact-image-right {
-  filter: saturate(0.95) contrast(1.04);
+  filter: invert(1) saturate(0.95) contrast(1.04);
 }
 
 #cal-booking-link.button.primary {
@@ -2006,36 +2005,74 @@ blockquote {
   background-color: rgba(26, 40, 44, 0.035) !important;
 }
 
-/* Reverse RGB on image hover */
-img {
-  transition: filter 0.35s ease, opacity 0.35s ease;
+/* Photos sit inverted; natural color on hover. Leave the logo alone. */
+.hero-avatar,
+.hero-image,
+.clean-about-image,
+.about-top-image,
+.about-image-left,
+.about-image-right,
+.blog-prose img {
+  filter: invert(1);
 }
 
-img:hover,
+.hero-avatar,
+.hero-image,
+.hero-image-stacked,
+.clean-about-image,
+.about-top-image,
+.about-image-left,
+.about-image-right,
+.contact-image-left,
+.contact-image-right,
+.contact-image-left-bg,
+.contact-image-right-bg,
+.blog-prose img {
+  transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+
+#home-section .hero-avatar-link:hover .hero-avatar,
+#home-section .hero-avatar-link:focus-visible .hero-avatar,
+.hero-avatar-link:hover .hero-avatar,
+.hero-avatar-link:focus-visible .hero-avatar,
+.hero-avatar:hover,
+.hero-image:hover,
 .clean-about-image-container:hover .clean-about-image,
 .clean-about-image:hover,
 .about-top-image:hover,
 .about-image-left:hover,
 .about-image-right:hover,
-.contact-left-block:hover img,
-.contact-right-block:hover img,
+.blog-prose img:hover {
+  filter: none;
+}
+
+.contact-left-block:hover .contact-image-left,
+.contact-right-block:hover .contact-image-right,
 .contact-image-left:hover,
-.contact-image-right:hover,
+.contact-image-right:hover {
+  filter: saturate(0.95) contrast(1.04);
+}
+
+.contact-left-block:hover .contact-image-left-bg,
+.contact-right-block:hover .contact-image-right-bg,
 .contact-image-left-bg:hover,
-.contact-image-right-bg:hover,
-.hero-image:hover,
-.hero-image-stacked:hover,
-#home-section .hero-avatar-link:hover .hero-avatar,
-.hero-avatar:hover,
-.logo-link-block:hover .logo,
-.logo:hover {
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: invert(1);
+.contact-image-right-bg:hover {
+  filter: blur(2px) saturate(0.85);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  img {
+  .hero-avatar,
+  .hero-image,
+  .hero-image-stacked,
+  .clean-about-image,
+  .about-top-image,
+  .about-image-left,
+  .about-image-right,
+  .contact-image-left,
+  .contact-image-right,
+  .contact-image-left-bg,
+  .contact-image-right-bg,
+  .blog-prose img {
     transition: none;
   }
 }
