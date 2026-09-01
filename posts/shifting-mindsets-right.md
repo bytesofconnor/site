@@ -1,8 +1,8 @@
 ---
-title: The right agentic balance
+title: Finding an agentic balance
 date: 2026-08-20
 description: With the rise of LLMs, I've noticed that my workflow has consistently changed month-over-month for about the past year. And overall, I've noticed a natural shift in the kind of day-to-day work that I'm doing as a developer. Sure, I'm still building features and shipping PRs, but the "how" I do my job, and the "where" I do my job has been subject to frequent changes and experimentation. This is an exploration of how agentic development is changing developer experiences in September 2026.
-draft: true
+draft: false
 ---
 
 With the rise of LLMs, I've noticed that my workflow has consistently changed month-over-month for about the past year. And overall, I've noticed a natural shift in the kind of day-to-day work that I'm doing as a developer. Sure, I'm still building features and shipping PRs, but the "how" I do my job, and the "where" I do my job has been subject to frequent changes and experimentation.
