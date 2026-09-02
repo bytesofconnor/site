@@ -493,14 +493,17 @@ nav.navigation,
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: invert(1) saturate(1) contrast(1.04) brightness(1.02);
+  filter: saturate(1) contrast(1.04) brightness(1.02);
   transform: scale(1.05);
-  transition: filter 0.35s ease, transform 0.35s ease;
+  transition: filter 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
+  opacity: 1;
+  mix-blend-mode: normal;
 }
 
 #home-section .hero-image-wrapper.hero-image-stack > .hero-image-stacked:hover {
-  filter: saturate(1) contrast(1.04) brightness(1.02);
+  filter: invert(1) saturate(1) contrast(1.04) brightness(1.02);
   transform: scale(1.05);
+  opacity: 1;
 }
 
 .hero-image {
@@ -1425,14 +1428,16 @@ blockquote {
 
 .contact-image-left-bg,
 .contact-image-right-bg {
-  filter: invert(1) blur(2px) saturate(0.85);
+  filter: blur(2px) saturate(0.85);
   mix-blend-mode: normal;
   opacity: 0.55;
 }
 
 .contact-image-left,
 .contact-image-right {
-  filter: invert(1) saturate(0.95) contrast(1.04);
+  filter: saturate(0.95) contrast(1.04);
+  opacity: 1;
+  mix-blend-mode: normal;
 }
 
 #cal-booking-link.button.primary {
@@ -2005,18 +2010,24 @@ blockquote {
   background-color: rgba(26, 40, 44, 0.035) !important;
 }
 
-/* Photos sit inverted; natural color on hover. Leave the logo alone. */
-.hero-avatar,
+/* Frog stays inverted until hover. Editorial photos are natural, invert on hover, and never stay faded. */
+.hero-avatar {
+  filter: invert(1);
+}
+
 .hero-image,
+.hero-image-stacked,
 .clean-about-image,
 .about-top-image,
 .about-image-left,
 .about-image-right,
+.contact-image-left,
+.contact-image-right,
 .blog-prose img {
-  filter: invert(1);
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }
 
-.hero-avatar,
 .hero-image,
 .hero-image-stacked,
 .clean-about-image,
@@ -2035,29 +2046,39 @@ blockquote {
 #home-section .hero-avatar-link:focus-visible .hero-avatar,
 .hero-avatar-link:hover .hero-avatar,
 .hero-avatar-link:focus-visible .hero-avatar,
-.hero-avatar:hover,
+.hero-avatar:hover {
+  filter: none;
+}
+
 .hero-image:hover,
+.hero-image-stacked:hover,
 .clean-about-image-container:hover .clean-about-image,
 .clean-about-image:hover,
 .about-top-image:hover,
 .about-image-left:hover,
 .about-image-right:hover,
 .blog-prose img:hover {
-  filter: none;
+  filter: invert(1);
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }
 
 .contact-left-block:hover .contact-image-left,
 .contact-right-block:hover .contact-image-right,
 .contact-image-left:hover,
 .contact-image-right:hover {
-  filter: saturate(0.95) contrast(1.04);
+  filter: invert(1) saturate(0.95) contrast(1.04);
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
 }
 
 .contact-left-block:hover .contact-image-left-bg,
 .contact-right-block:hover .contact-image-right-bg,
 .contact-image-left-bg:hover,
 .contact-image-right-bg:hover {
-  filter: blur(2px) saturate(0.85);
+  filter: invert(1) blur(2px) saturate(0.85);
+  opacity: 1;
+  mix-blend-mode: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {
