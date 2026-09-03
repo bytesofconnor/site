@@ -1,5 +1,5 @@
 ---
-title: Reflections on manual code review
+title: Manual code review, or nah
 date: 2026-09-03
 description: Over the past few months, I've been hearing more and more chatter online and at work about how the days of manually reviewing code are behind us. I've even heard a fair amount of, "If you're still reviewing code manually, you're falling behind. Your NGMI! ". While I think that is a dangerous sentiment for every engineer to live by, I can definitely see that things are changing and moving in that direction more than ever. I do believe that if you are leaning into automatic code review, you better have a really good code review setup. It should ideally be self-improving, it should be connected to the right systems to gather context, and it should be fully tuned into the codebase patterns.
 image: ''
