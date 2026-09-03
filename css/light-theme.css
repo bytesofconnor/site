@@ -799,32 +799,51 @@ nav.navigation,
   align-items: center;
   justify-content: center;
   font-family: inherit;
-  background: var(--fold);
+  background: #1a282c;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  opacity: 0.86;
+  opacity: 0.92;
   transition: opacity 0.2s ease;
 }
 
 #work-section .project-fold-bar::before {
   content: '';
   position: absolute;
-  inset: -55%;
-  background-image: var(--fold-image);
+  inset: -80%;
   background-size: cover;
   background-position: center;
-  filter: blur(34px) saturate(1.18) brightness(0.7);
-  transform: scale(1.2);
+  filter: blur(18px) saturate(1.25) brightness(0.82);
+  transform: scale(1.15);
   z-index: 0;
   pointer-events: none;
+}
+
+#work-section .project-fold-bar[data-project="travel"]::before {
+  background-image: url('../images/hero-citrus-grove.jpg');
+  background-position: 35% 40%;
+}
+
+#work-section .project-fold-bar[data-project="webchella"]::before {
+  background-image: url('../images/colombia-market-bread.jpg');
+  background-position: 50% 55%;
+}
+
+#work-section .project-fold-bar[data-project="pinkys"]::before {
+  background-image: url('../images/hero-citrus-ripe.jpg');
+  background-position: 60% 30%;
+}
+
+#work-section .project-fold-bar[data-project="finsight"]::before {
+  background-image: url('../images/GreatBasinBristol.jpg');
+  background-position: 45% 20%;
 }
 
 #work-section .project-fold-bar::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(20, 32, 35, 0.28);
+  background: rgba(20, 32, 35, 0.18);
   z-index: 0;
   pointer-events: none;
 }
@@ -834,7 +853,7 @@ nav.navigation,
 }
 
 #work-section .project-fold-bar:hover::before {
-  filter: blur(28px) saturate(1.22) brightness(0.78);
+  filter: blur(14px) saturate(1.3) brightness(0.9);
 }
 
 #work-section .project-fold-bar.is-active {
@@ -844,7 +863,7 @@ nav.navigation,
 }
 
 #work-section .project-fold-bar.is-active::after {
-  background: rgba(20, 32, 35, 0.16);
+  background: rgba(20, 32, 35, 0.08);
 }
 
 #work-section .project-fold-bar span {
