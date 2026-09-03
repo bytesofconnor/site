@@ -520,13 +520,51 @@ nav.navigation,
 .hero-social-links .social-link.instagram-pill,
 .hero-social-links .social-link.github-pill,
 .hero-social-links .social-link.linkedin-pill {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   min-height: 52px;
   padding: 11px 14px;
   gap: 12px;
   border: 1px solid var(--border-default);
   border-radius: 4px;
-  background-color: var(--bg-elevated);
+  background-color: transparent;
   box-shadow: none;
+}
+
+.hero-social-links .social-link.x-pill::before,
+.hero-social-links .social-link.instagram-pill::before,
+.hero-social-links .social-link.github-pill::before,
+.hero-social-links .social-link.linkedin-pill::before {
+  content: '';
+  position: absolute;
+  inset: -48px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(44px) saturate(0.8) brightness(1.28);
+  opacity: 0.62;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-social-links .social-link.x-pill::before {
+  background-image: url('../images/hero-citrus-grove.jpg');
+  background-position: 18% 22%;
+}
+
+.hero-social-links .social-link.instagram-pill::before {
+  background-image: url('../images/hero-citrus-ripe.jpg');
+  background-position: 78% 40%;
+}
+
+.hero-social-links .social-link.github-pill::before {
+  background-image: url('../images/GreatBasinBristol.jpg');
+  background-position: 48% 28%;
+}
+
+.hero-social-links .social-link.linkedin-pill::before {
+  background-image: url('../images/colombia-market-bread.jpg');
+  background-position: 42% 62%;
 }
 
 .hero-social-links .social-link.x-pill:hover,
@@ -534,9 +572,25 @@ nav.navigation,
 .hero-social-links .social-link.github-pill:hover,
 .hero-social-links .social-link.linkedin-pill:hover {
   border-color: var(--border-strong);
-  background-color: var(--bg-panel);
+  background-color: transparent;
   box-shadow: none;
   transform: none;
+}
+
+.hero-social-links .social-link.x-pill:hover::before,
+.hero-social-links .social-link.instagram-pill:hover::before,
+.hero-social-links .social-link.github-pill:hover::before,
+.hero-social-links .social-link.linkedin-pill:hover::before {
+  opacity: 0.82;
+  filter: blur(36px) saturate(0.9) brightness(1.32);
+}
+
+.hero-social-links .social-link.x-pill > *,
+.hero-social-links .social-link.instagram-pill > *,
+.hero-social-links .social-link.github-pill > *,
+.hero-social-links .social-link.linkedin-pill > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-social-links .social-icon-wrapper {
@@ -732,6 +786,9 @@ nav.navigation,
 }
 
 #work-section .project-fold-bar {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   flex: 0 0 3rem !important;
   width: 3rem !important;
   min-width: 3rem !important;
@@ -746,23 +803,53 @@ nav.navigation,
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  opacity: 0.78;
-  transition: opacity 0.2s ease, filter 0.2s ease;
+  opacity: 0.86;
+  transition: opacity 0.2s ease;
+}
+
+#work-section .project-fold-bar::before {
+  content: '';
+  position: absolute;
+  inset: -55%;
+  background-image: var(--fold-image);
+  background-size: cover;
+  background-position: center;
+  filter: blur(34px) saturate(1.18) brightness(0.7);
+  transform: scale(1.2);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#work-section .project-fold-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 32, 35, 0.28);
+  z-index: 0;
+  pointer-events: none;
 }
 
 #work-section .project-fold-bar:hover {
   opacity: 1;
-  filter: brightness(1.06);
+}
+
+#work-section .project-fold-bar:hover::before {
+  filter: blur(28px) saturate(1.22) brightness(0.78);
 }
 
 #work-section .project-fold-bar.is-active {
   opacity: 1;
   box-shadow: inset 0 0 0 1px rgba(250, 248, 244, 0.28);
   cursor: default;
-  filter: none;
+}
+
+#work-section .project-fold-bar.is-active::after {
+  background: rgba(20, 32, 35, 0.16);
 }
 
 #work-section .project-fold-bar span {
+  position: relative;
+  z-index: 1;
   display: block;
   font-size: 10px;
   font-weight: 500;
