@@ -1,7 +1,8 @@
 ---
 title: Hidden fruits of worktrees
 date: 2026-08-20
-description: Worktrees have become an integral part of my workflow, because they have been allowing me to minimize the impact of context switching. In this article I discuss a little bit about one of my current workflows that leverage the combined power of shell scripts, git worktrees, the warp terminal, and of course some claude skills.
+description: Worktrees have become an integral part of my workflow, because they have been allowing me to minimize the impact of context switching.
+image: ''
 draft: false
 ---
 
