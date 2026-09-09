@@ -630,55 +630,48 @@ nav.navigation,
 .schedule-section {
   padding: 0;
   background: var(--bg-page);
+}
+
+.schedule-section .about-1-2-grid {
+  align-items: stretch;
+}
+
+.schedule-section .work-wrapper {
+  background-color: var(--bg-panel);
   border-bottom: 1px solid var(--border-default);
 }
 
-.schedule-section .container.w-container {
-  border-left: 1px solid var(--border-default);
-  border-right: 1px solid var(--border-default);
-  border-bottom: none;
+.schedule-section .paragraph-2 {
+  color: var(--text-secondary);
 }
 
-.schedule-content {
-  max-width: none;
-  padding: 56px 24px 48px;
+.schedule-new-tab {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-link);
+  text-decoration: none;
 }
 
-.schedule-content h2 {
-  margin-bottom: 8px;
-}
-
-.schedule-content .paragraph.large {
-  color: var(--text-muted);
-  margin-bottom: 0;
+.schedule-new-tab:hover {
+  color: var(--accent-cta);
 }
 
 .cal-embed-wrapper {
   position: relative;
-  margin-top: 24px;
-  border: 1px solid var(--border-default);
+  margin: 0;
+  border: 0;
   border-radius: 0;
   background: var(--bg-panel);
   box-shadow: none;
-  padding: 0;
-  overflow: hidden;
-}
-
-.cal-embed-wrapper::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 52px;
-  background: linear-gradient(to bottom, rgba(250, 248, 244, 0), var(--bg-panel) 70%);
-  pointer-events: none;
-  z-index: 1;
+  padding: 20px 24px 28px;
+  overflow: visible;
 }
 
 .cal-inline-host {
-  min-height: 700px;
-  overflow: hidden;
+  min-height: 560px;
+  overflow: visible;
   background: var(--bg-panel);
 }
 
@@ -687,22 +680,17 @@ nav.navigation,
   width: 100% !important;
   border: 0 !important;
   background: var(--bg-panel) !important;
-  margin-top: -8px;
-  margin-bottom: -52px;
-  min-height: 720px;
+  margin: 0;
+  min-height: 560px;
 }
 
 #cal-booking-link {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 /* ——— Typography blocks ——— */
 .paragraph.large {
   color: var(--text-secondary);
-}
-
-.schedule-lead {
-  max-width: 42ch;
 }
 
 .paragraph-2,
@@ -725,299 +713,106 @@ nav.navigation,
 }
 
 #work-section .work-wrapper {
-  display: flex !important;
-  flex-direction: row !important;
-  min-height: 0;
-  border-bottom: 1px solid var(--border-default);
-  background-color: var(--bg-page);
-}
-
-#work-section .project-strip {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: stretch !important;
-  width: 100% !important;
-  min-height: 17.5rem;
-  height: 100%;
-  gap: 1px;
-  overflow: hidden;
-  background: var(--bg-page);
-}
-
-#work-section .project-stage {
-  position: relative;
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow: hidden;
-  background: var(--bg-panel);
-  box-shadow: none;
-}
-
-#work-section .project-stage::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: blur(44px) saturate(0.8) brightness(1.28);
-  opacity: 0.72;
-  clip-path: inset(0 calc(100% - 5px) 0 0);
-  z-index: 2;
-  pointer-events: none;
-}
-
-#work-section .project-strip[data-active="travel"] .project-stage::before {
-  background-image: url('../images/hero-citrus-grove.jpg');
-  background-position: 35% 40%;
-}
-
-#work-section .project-strip[data-active="webchella"] .project-stage::before {
-  background-image: url('../images/colombia-market-bread.jpg');
-  background-position: 50% 55%;
-}
-
-#work-section .project-strip[data-active="pinkys"] .project-stage::before {
-  background-image: url('../images/hero-citrus-ripe.jpg');
-  background-position: 60% 30%;
-}
-
-#work-section .project-strip[data-active="finsight"] .project-stage::before {
-  background-image: url('../images/GreatBasinBristol.jpg');
-  background-position: 45% 20%;
-}
-
-#work-section .project-card {
-  position: absolute;
-  inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-default);
+}
+
+#work-section .project-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
   gap: 10px;
-  margin: 0;
-  padding: 28px 32px 28px 32px;
-  opacity: 0;
-  transform: translateY(6px);
-  pointer-events: none;
-  transition:
-    opacity 0.32s ease,
-    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 12px;
 }
 
-#work-section .project-card.is-active {
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
-}
-
-#work-section .project-rail {
-  display: flex !important;
-  flex-direction: row !important;
-  flex: 0 0 auto;
-  align-items: stretch;
-  gap: 1px;
-}
-
-#work-section .project-fold-bar {
+#work-section .project-item {
   position: relative;
-  overflow: hidden;
   isolation: isolate;
-  flex: 0 0 3rem !important;
-  width: 3rem !important;
-  min-width: 3rem !important;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  font-family: inherit;
-  background: #f3f1ec;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  opacity: 0.92;
-  transition: opacity 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 32px;
+  overflow: hidden;
+  background: transparent;
 }
 
-#work-section .project-fold-bar::before {
+#work-section .project-item::before {
   content: '';
   position: absolute;
   inset: -80%;
-  background-size: cover;
-  background-position: center;
-  filter: blur(44px) saturate(0.8) brightness(1.28);
-  opacity: 0.72;
-  transform: scale(1.15);
   z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(44px) saturate(1.15) brightness(1.02);
   pointer-events: none;
 }
 
-#work-section .project-fold-bar[data-project="travel"]::before {
+#work-section .project-item::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  z-index: 0;
+  background: var(--bg-panel);
+  pointer-events: none;
+}
+
+#work-section .project-item[data-project="travel"]::before {
   background-image: url('../images/hero-citrus-grove.jpg');
   background-position: 35% 40%;
 }
 
-#work-section .project-fold-bar[data-project="webchella"]::before {
+#work-section .project-item[data-project="webchella"]::before {
   background-image: url('../images/colombia-market-bread.jpg');
   background-position: 50% 55%;
 }
 
-#work-section .project-fold-bar[data-project="pinkys"]::before {
+#work-section .project-item[data-project="pinkys"]::before {
   background-image: url('../images/hero-citrus-ripe.jpg');
   background-position: 60% 30%;
 }
 
-#work-section .project-fold-bar[data-project="finsight"]::before {
+#work-section .project-item[data-project="finsight"]::before {
   background-image: url('../images/GreatBasinBristol.jpg');
   background-position: 45% 20%;
 }
 
-#work-section .project-fold-bar::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(250, 248, 244, 0.18);
-  z-index: 0;
-  pointer-events: none;
-}
-
-#work-section .project-fold-bar:hover {
-  opacity: 1;
-}
-
-#work-section .project-fold-bar:hover::before {
-  opacity: 0.88;
-  filter: blur(36px) saturate(0.9) brightness(1.32);
-}
-
-#work-section .project-fold-bar.is-active {
-  opacity: 1;
-  box-shadow: inset 0 0 0 1px rgba(26, 40, 44, 0.16);
-  cursor: default;
-}
-
-#work-section .project-fold-bar.is-active::after {
-  background: rgba(250, 248, 244, 0.06);
-}
-
-#work-section .project-fold-bar span {
+#work-section .project-item > * {
   position: relative;
   z-index: 1;
-  display: block;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--text-primary);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
 }
 
-#work-section .project-fold-bar:focus-visible {
-  outline: 2px solid var(--accent-cta);
-  outline-offset: -2px;
-  z-index: 1;
-}
-
-#work-section .project-fold-kicker {
+#work-section .project-item h3 {
   margin: 0;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: var(--text-muted);
-  transition: color 0.35s ease;
-}
-
-#work-section .project-card h3 {
-  margin: 0;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 1.15;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 
-#work-section .project-card .paragraph.large {
+#work-section .project-item p {
   margin: 0;
-  max-width: 62ch;
-  font-size: 15px;
-  line-height: 1.55;
+  max-width: 52ch;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--text-secondary);
 }
 
-#work-section .project-fold-link {
+#work-section .project-item-link {
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
   width: fit-content;
-  margin-top: 6px;
+  margin-top: 4px;
   font-size: 13px;
   font-weight: 500;
   color: var(--accent-link);
   text-decoration: none;
 }
 
-#work-section .project-fold-link:hover {
+#work-section .project-item-link:hover {
   color: var(--accent-cta);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #work-section .project-stage,
-  #work-section .project-card,
-  #work-section .project-fold-bar,
-  #work-section .project-fold-kicker {
-    transition: none;
-  }
-
-  #work-section .project-card {
-    transform: none;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  #work-section .project-strip {
-    flex-wrap: wrap !important;
-    min-height: 0;
-    height: auto;
-  }
-
-  #work-section .project-rail {
-    flex: 1 1 100%;
-    order: -1;
-    min-height: 3rem;
-  }
-
-  #work-section .project-fold-bar {
-    flex: 1 1 0% !important;
-    width: auto !important;
-    min-width: 0 !important;
-  }
-
-  #work-section .project-fold-bar span {
-    writing-mode: horizontal-tb;
-    transform: none;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-  }
-
-  #work-section .project-stage {
-    flex: 1 1 100%;
-    min-height: 14rem;
-  }
-
-  #work-section .project-stage::before {
-    clip-path: inset(0 0 calc(100% - 5px) 0);
-  }
-
-  #work-section .project-card {
-    padding: 24px;
-  }
-
-  #work-section .project-card h3 {
-    font-size: 26px;
-  }
 }
 
 .work-project-wrapper {
@@ -1037,71 +832,55 @@ nav.navigation,
   color: var(--text-primary);
 }
 
-/* ——— Technical skills columns ——— */
-.engineering-price-info,
-.ux-price-info,
-.dev-pricing-title {
-  color: var(--text-muted);
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-}
-
-#technical-skills-section .pricing-grid {
+/* ——— Skills list (matches blog / projects grid) ——— */
+#technical-skills-section .about-1-2-grid {
   align-items: stretch;
-  border: 1px solid var(--border-default);
 }
 
-#technical-skills-section .data-pricing-block,
-#technical-skills-section .ux-pricing-block,
-#technical-skills-section .web-dev-pricing-block {
-  background-color: transparent !important;
-  box-shadow: none;
-}
-
-#technical-skills-section .ux-pricing-block,
-#technical-skills-section .web-dev-pricing-block {
-  border-left: 1px solid var(--border-default);
-}
-
-#technical-skills-section .data-pricing-block:hover,
-#technical-skills-section .ux-pricing-block:hover,
-#technical-skills-section .web-dev-pricing-block:hover {
-  background-color: transparent !important;
-  box-shadow: none;
-}
-
-#technical-skills-section .pricing-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 4px;
-}
-
-#technical-skills-section .engineering-price-info,
-#technical-skills-section .ux-price-info,
-#technical-skills-section .dev-pricing-title {
-  min-height: 1.4em;
-  line-height: 1.4;
-}
-
-#technical-skills-section .price-tag {
-  min-height: calc(1.15em * 2);
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
-}
-
-.pricing-paragraph,
-.price-tag {
+#technical-skills-section .paragraph-2 {
   color: var(--text-secondary);
 }
 
-#technical-skills-section .price-tag {
+#technical-skills-section .work-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-default);
+}
+
+#technical-skills-section .skills-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+#technical-skills-section .skills-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 36px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+#technical-skills-section .skills-item:last-child {
+  border-bottom: none;
+}
+
+#technical-skills-section .skills-item h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
+}
+
+#technical-skills-section .skills-item p {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
 }
 
 .data-pricing-block,
@@ -1367,8 +1146,7 @@ nav.navigation,
 }
 
 .work-section-wrapper h2,
-.contact-top-header h2,
-.schedule-content h2 {
+.contact-top-header h2 {
   color: var(--text-primary);
 }
 
@@ -1399,16 +1177,14 @@ blockquote {
 }
 
 @media screen and (max-width: 767px) {
-  .schedule-section {
-    padding: 64px 0 40px;
-  }
-
-  .cal-inline-host {
-    min-height: 640px;
-  }
-
+  .cal-inline-host,
   .cal-embed-wrapper iframe {
-    min-height: 660px;
+    min-height: 520px;
+  }
+
+  #technical-skills-section .skills-item,
+  #work-section .project-item {
+    padding: 24px 20px;
   }
 }
 
@@ -1563,12 +1339,6 @@ blockquote {
   filter: saturate(0.95) contrast(1.04);
   opacity: 1;
   mix-blend-mode: normal;
-}
-
-#cal-booking-link.button.primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .logo-link-block:focus-visible {
@@ -1772,7 +1542,9 @@ blockquote {
   }
 
   #thoughts-section .blog-empty,
-  .blog-item {
+  .blog-item,
+  #technical-skills-section .skills-item,
+  #work-section .project-item {
     padding-left: 24px;
     padding-right: 24px;
   }

@@ -38,7 +38,7 @@
 		<link href="css/normalize.css" rel="stylesheet" type="text/css" />
 		<link href="css/webflow.css" rel="stylesheet" type="text/css" />
 		<link href="css/connor-freelance-portfolio-23-24.webflow.css" rel="stylesheet" type="text/css" />
-		<link href="css/light-theme.css?v=project-bar" rel="stylesheet" type="text/css" />
+		<link href="css/light-theme.css?v=project-rim-2" rel="stylesheet" type="text/css" />
 		
 		<!-- Font Loading -->
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -104,7 +104,7 @@
 						<a href="#home-section" class="navlink mobile">Home.</a>
 						<a href="#thoughts-section" class="navlink mobile">Blog.</a>
 						<a href="#about-me-section" class="navlink mobile">My Background.</a>
-						<a href="#technical-skills-section" class="navlink mobile">Technical Skills.</a>
+						<a href="#technical-skills-section" class="navlink mobile">Skills.</a>
 						<a href="#work-section" class="navlink mobile">My Projects.</a>
 						<a href="#schedule-section" class="navlink mobile">Schedule.</a>
 						<a href="#contact-section" class="navlink mobile">Contact.</a>
@@ -345,56 +345,32 @@
 					</div>
 				</div>
 			</section>
-			<!-- Technical Skills Section -->
-			<section id="technical-skills-section" class="services-detailed-section">
-				<div class="container w-container">
-					<div class="w-layout-grid pricing-grid">
-						<div
-							id="w-node-fa12bce4-c423-531b-b444-36b922574f55-07b22f1d"
-							class="data-pricing-block"
-						>
-							<div class="pricing-card">
-								<div class="pricing-header">
-									<div class="engineering-price-info">
-										Analytics
-									</div>
-									<div class="price-tag">Data Engineer</div>
-								</div>
-								<p class="pricing-paragraph">
-									Pipelines, models, warehouses, and reporting — moving data from where it sits to something you can actually use.
+			<!-- Skills Section -->
+			<section id="technical-skills-section" class="work-section">
+				<div class="container work-grid home w-container">
+					<div class="w-layout-grid about-1-2-grid">
+						<div class="work-section-wrapper">
+							<div class="work-content-wrapper">
+								<h2 class="heading-2">Skills.</h2>
+								<p class="paragraph-2">
+									Data, systems, and the interface.
 								</p>
 							</div>
 						</div>
-						<div
-							id="w-node-_3f0e463a-9b9d-a823-cd01-340af8b90448-07b22f1d"
-							class="ux-pricing-block"
-						>
-							<div class="pricing-card">
-								<div class="pricing-header">
-									<div class="ux-price-info">
-										Architecture
-									</div>
-									<div class="price-tag">System Design</div>
-								</div>
-								<p class="pricing-paragraph">
-									Schemas, services, and how data moves between them. Sorting that out early saves a lot of rework later.
-								</p>
-							</div>
-						</div>
-						<div
-							id="w-node-_8953ced6-d010-3fdd-ed02-9ec3e64f897f-07b22f1d"
-							class="web-dev-pricing-block"
-						>
-							<div class="pricing-card">
-								<div class="pricing-header">
-									<div class="dev-pricing-title">
-										Product
-									</div>
-									<div class="price-tag">UI Design &amp; Building</div>
-								</div>
-								<p class="pricing-paragraph">
-									How it looks and how it runs. React, TypeScript, and Next.js most days; Node, Python, or SQL when that’s what the work needs.
-								</p>
+						<div class="work-wrapper">
+							<div class="skills-list">
+								<article class="skills-item">
+									<h3>Data Engineer</h3>
+									<p>Pipelines, models, warehouses, and reporting — moving data from where it sits to something you can actually use.</p>
+								</article>
+								<article class="skills-item">
+									<h3>System Design</h3>
+									<p>Schemas, services, and how data moves between them. Sorting that out early saves a lot of rework later.</p>
+								</article>
+								<article class="skills-item">
+									<h3>UI Design &amp; Building</h3>
+									<p>How it looks and how it runs. React, TypeScript, and Next.js most days; Node, Python, or SQL when that’s what the work needs.</p>
+								</article>
 							</div>
 						</div>
 					</div>
@@ -411,8 +387,7 @@
 							<div class="work-content-wrapper">
 								<h2 class="heading-2">My Projects.</h2>
 								<p class="paragraph-2">
-									I enjoy building things that solve real problems and 
-									bring ideas to life on the web.
+									A few things I’ve shipped — some for me, some for other people.
 								</p>
 							</div>
 						</div>
@@ -420,89 +395,62 @@
 							id="w-node-edc4a9d5-5b4b-f1f7-19f4-4e9c6376b2a2-07b22f1d"
 							class="work-wrapper"
 						>
-							<div class="project-strip" data-active="travel" style="--fold: #5d6e48;">
-								<div class="project-stage">
-									<article class="project-card is-active" id="project-travel" data-project="travel">
-										<p class="project-fold-kicker">Shared Trip Planner</p>
-										<h3>Travel Calendar</h3>
-										<p class="paragraph large">
-											Started while planning a South America trip — a shared canvas with AI chat and memory for flights, stays, packing, and the days in between.
-										</p>
-										<a href="https://www.travelcalendar.space/" target="_blank" rel="noopener" class="project-fold-link">Visit Site →</a>
-									</article>
-									<article class="project-card" id="project-webchella" data-project="webchella" inert>
-										<p class="project-fold-kicker">Full-Stack Framework</p>
-										<h3>Webchella</h3>
-										<p class="paragraph large">
-											A production bootstrap with opinionated choices for database, auth, data flow, and deploy — TypeScript, Next.js, tRPC, and Drizzle.
-										</p>
-										<a href="https://webchella.dev/" target="_blank" rel="noopener" class="project-fold-link">Visit Site →</a>
-									</article>
-									<article class="project-card" id="project-pinkys" data-project="pinkys" inert>
-										<p class="project-fold-kicker">Mobile Mocktail Service</p>
-										<h3>Pinkys Up</h3>
-										<p class="paragraph large">
-											The digital platform for Pinkys Up in Washington DC — booking forms, responsive layout, and a few careful microinteractions.
-										</p>
-										<a href="https://www.pinkysup.social/" target="_blank" rel="noopener" class="project-fold-link">Visit Site →</a>
-									</article>
-									<article class="project-card" id="project-finsight" data-project="finsight" inert>
-										<p class="project-fold-kicker">AI Compliance Innovation</p>
-										<h3>Finsight</h3>
-										<p class="paragraph large">
-											First place at DNV NextGen 2024. The concept became Smarter Compliance, now used on Norwegian fish farms.
-										</p>
-										<a href="https://www.linkedin.com/posts/remi-eriksen_decarbonization-digitalization-ai-ugcPost-7240029115322449922-hwOx" target="_blank" rel="noopener" class="project-fold-link">
-											<span>View on LinkedIn</span>
-											<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-												<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-											</svg>
-										</a>
-									</article>
-								</div>
-								<div class="project-rail" role="tablist" aria-label="Projects">
-									<button type="button" class="project-fold-bar is-active" role="tab" id="tab-travel" data-project="travel" aria-selected="true" aria-controls="project-travel" style="--fold: #5d6e48;">
-										<span>Travel Calendar</span>
-									</button>
-									<button type="button" class="project-fold-bar" role="tab" id="tab-webchella" data-project="webchella" aria-selected="false" aria-controls="project-webchella" tabindex="-1" style="--fold: #9a7848;">
-										<span>Webchella</span>
-									</button>
-									<button type="button" class="project-fold-bar" role="tab" id="tab-pinkys" data-project="pinkys" aria-selected="false" aria-controls="project-pinkys" tabindex="-1" style="--fold: #9a4a4a;">
-										<span>Pinkys Up</span>
-									</button>
-									<button type="button" class="project-fold-bar" role="tab" id="tab-finsight" data-project="finsight" aria-selected="false" aria-controls="project-finsight" tabindex="-1" style="--fold: #45543c;">
-										<span>Finsight</span>
-									</button>
-								</div>
+							<div class="project-list">
+								<article class="project-item" data-project="travel">
+									<h3>Travel Calendar</h3>
+									<p>Started while planning a South America trip — a shared canvas with AI chat and memory for flights, stays, packing, and the days in between.</p>
+									<a href="https://www.travelcalendar.space/" target="_blank" rel="noopener" class="project-item-link">Visit site →</a>
+								</article>
+								<article class="project-item" data-project="webchella">
+									<h3>Webchella</h3>
+									<p>A production bootstrap with opinionated choices for database, auth, data flow, and deploy — TypeScript, Next.js, tRPC, and Drizzle.</p>
+									<a href="https://webchella.dev/" target="_blank" rel="noopener" class="project-item-link">Visit site →</a>
+								</article>
+								<article class="project-item" data-project="pinkys">
+									<h3>Pinkys Up</h3>
+									<p>The digital platform for Pinkys Up in Washington DC — booking forms, responsive layout, and a few careful microinteractions.</p>
+									<a href="https://www.pinkysup.social/" target="_blank" rel="noopener" class="project-item-link">Visit site →</a>
+								</article>
+								<article class="project-item" data-project="finsight">
+									<h3>Finsight</h3>
+									<p>First place at DNV NextGen 2024. The concept became Smarter Compliance, now used on Norwegian fish farms.</p>
+									<a href="https://www.linkedin.com/posts/remi-eriksen_decarbonization-digitalization-ai-ugcPost-7240029115322449922-hwOx" target="_blank" rel="noopener" class="project-item-link">View on LinkedIn →</a>
+								</article>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- Scheduling Section -->
-			<section id="schedule-section" class="schedule-section">
-				<div class="container w-container">
-					<div class="schedule-content">
-						<h2>Schedule a conversation.</h2>
-						<p class="paragraph large schedule-lead">
-							Pick a 30-minute slot that works for you.
-						</p>
-						<div class="cal-embed-wrapper">
-							<div
-								id="cal-inline-embed"
-								class="cal-inline-host"
-								title="Book a meeting with Connor Barrett"
-							></div>
+			<section id="schedule-section" class="work-section schedule-section">
+				<div class="container work-grid home w-container">
+					<div class="w-layout-grid about-1-2-grid">
+						<div class="work-section-wrapper">
+							<div class="work-content-wrapper">
+								<h2 class="heading-2">Schedule.</h2>
+								<p class="paragraph-2">
+									Thirty minutes, if you want to talk.
+								</p>
+								<a
+									id="cal-booking-link"
+									href="https://cal.com/connor-barrett-udt2su/30min"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="schedule-new-tab"
+								>
+									Open in a new tab →
+								</a>
+							</div>
 						</div>
-						<a
-							id="cal-booking-link"
-							href="https://cal.com/connor-barrett-udt2su/30min"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="button primary w-button"
-						>
-							Open scheduler in a new tab
-						</a>
+						<div class="work-wrapper">
+							<div class="cal-embed-wrapper">
+								<div
+									id="cal-inline-embed"
+									class="cal-inline-host"
+									title="Book a meeting with Connor Barrett"
+								></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -713,6 +661,10 @@
 					Cal('init', { origin: 'https://cal.com' });
 					Cal('ui', {
 						theme: 'light',
+						hideEventTypeDetails: true,
+						showTimezoneWhenEventDetailsHidden: true,
+						disableAutoScroll: true,
+						layout: 'week_view',
 						styles: {
 							branding: {
 								brandColor: '#2f4549',
@@ -720,9 +672,9 @@
 						},
 						cssVarsPerTheme: {
 							light: {
-								'cal-bg': '#ffffff',
-								'cal-bg-emphasis': '#ffffff',
-								'cal-bg-muted': '#ffffff',
+								'cal-bg': '#faf8f4',
+								'cal-bg-emphasis': '#faf8f4',
+								'cal-bg-muted': '#faf8f4',
 								'cal-border-booker': '#cfd9d5',
 								'cal-text-emphasis': '#142023',
 								'cal-brand': '#2f4549',
@@ -734,7 +686,7 @@
 						calLink: 'connor-barrett-udt2su/30min',
 						config: {
 							theme: 'light',
-							layout: 'month_view',
+							layout: 'week_view',
 						},
 					});
 				}
@@ -770,78 +722,6 @@
 				'a-journey-through-lifes-web',
 				'grove',
 			];
-
-			(function initProjectStrip() {
-				const strip = document.querySelector('#work-section .project-strip');
-				if (!strip) return;
-
-				const tabs = Array.from(strip.querySelectorAll('.project-fold-bar'));
-				const cards = Array.from(strip.querySelectorAll('.project-card'));
-				const hoverFine = window.matchMedia('(hover: hover)').matches;
-				const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-				const HOVER_DELAY = reduceMotion ? 0 : 180;
-				let hoverTimer = 0;
-
-				function activate(id, moveFocus) {
-					const fold = tabs.find((tab) => tab.getAttribute('data-project') === id);
-					if (!fold) return;
-
-					strip.setAttribute('data-active', id);
-					const color = fold.style.getPropertyValue('--fold').trim();
-					if (color) strip.style.setProperty('--fold', color);
-
-					tabs.forEach((tab) => {
-						const on = tab === fold;
-						tab.classList.toggle('is-active', on);
-						tab.setAttribute('aria-selected', on ? 'true' : 'false');
-						tab.tabIndex = on ? 0 : -1;
-					});
-
-					cards.forEach((card) => {
-						const on = card.getAttribute('data-project') === id;
-						card.classList.toggle('is-active', on);
-						if (on) card.removeAttribute('inert');
-						else card.setAttribute('inert', '');
-					});
-
-					if (moveFocus) fold.focus();
-				}
-
-				function schedule(id) {
-					window.clearTimeout(hoverTimer);
-					hoverTimer = window.setTimeout(() => activate(id, false), HOVER_DELAY);
-				}
-
-				const rail = strip.querySelector('.project-rail');
-				tabs.forEach((tab) => {
-					const id = tab.getAttribute('data-project');
-					if (hoverFine) {
-						tab.addEventListener('mouseenter', () => schedule(id));
-					}
-					tab.addEventListener('click', () => {
-						window.clearTimeout(hoverTimer);
-						activate(id, false);
-					});
-					tab.addEventListener('focus', () => {
-						window.clearTimeout(hoverTimer);
-						activate(id, false);
-					});
-					tab.addEventListener('keydown', (event) => {
-						const i = tabs.indexOf(tab);
-						let next = -1;
-						if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (i + 1) % tabs.length;
-						if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (i - 1 + tabs.length) % tabs.length;
-						if (event.key === 'Home') next = 0;
-						if (event.key === 'End') next = tabs.length - 1;
-						if (next < 0) return;
-						event.preventDefault();
-						activate(tabs[next].getAttribute('data-project'), true);
-					});
-				});
-				if (hoverFine && rail) {
-					rail.addEventListener('mouseleave', () => window.clearTimeout(hoverTimer));
-				}
-			})();
 
 			(function redirectBiodiversityHashes() {
 				const hash = window.location.hash.slice(1);
