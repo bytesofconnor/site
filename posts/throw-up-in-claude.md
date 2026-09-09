@@ -1,7 +1,7 @@
 ---
 title: Throwing up in Claude
 date: 2026-09-09
-description: I knew I needed a MultiSelect component, and I knew how it needed to look and function. I trusted, loosely, that my agent, with the help of codebase rules and session context, could identify patterns in related components, find the necessary design tokens, and put together a decent solution. If followed by manual review iterations, this has been an effective strategy for shipping high quality PRs quickly without accumulating extensive comprehension debt.
+description: If followed by manual review iterations, this has been an effective strategy for shipping high quality PRs quickly without accumulating extensive comprehension debt.
 image: ''
 draft: false
 ---
