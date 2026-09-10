@@ -1192,6 +1192,50 @@ nav.navigation,
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
 }
 
+.pixel-field {
+  isolation: isolate;
+  overflow: hidden;
+  clip-path: inset(0);
+}
+
+.pixel-field-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  clip-path: inset(0);
+}
+
+.pixel-field img,
+#home-section .pixel-field > .hero-image-stacked,
+#home-section .pixel-field > .hero-image-stacked:hover {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none !important;
+  transform: none !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pixel-field {
+    cursor: crosshair;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-field-canvas {
+    display: none;
+  }
+}
+
 .success-message,
 .error-message {
   color: var(--text-on-brand);

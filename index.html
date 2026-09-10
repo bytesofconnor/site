@@ -38,7 +38,7 @@
 		<link href="css/normalize.css" rel="stylesheet" type="text/css" />
 		<link href="css/webflow.css" rel="stylesheet" type="text/css" />
 		<link href="css/connor-freelance-portfolio-23-24.webflow.css" rel="stylesheet" type="text/css" />
-		<link href="css/light-theme.css?v=quote-mobile" rel="stylesheet" type="text/css" />
+		<link href="css/light-theme.css?v=pixel-hero" rel="stylesheet" type="text/css" />
 		
 		<!-- Font Loading -->
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -187,13 +187,14 @@
 								</a>
 							</div>
 						</div>
-						<div id="w-node-_3d297790-9ebf-1802-712e-7ce66433e97b-07b22f1d" class="hero-image-wrapper hero-image-stack">
+						<div id="w-node-_3d297790-9ebf-1802-712e-7ce66433e97b-07b22f1d" class="hero-image-wrapper hero-image-stack pixel-field">
 							<img
 								src="images/hero-citrus-grove.jpg"
 								loading="eager"
 								alt="Citrus on the tree in Colombia"
 								class="hero-image-stacked editorial-photo"
 							/>
+							<canvas class="pixel-field-canvas" aria-hidden="true"></canvas>
 						</div>
 					</div>
 				</div>
@@ -317,10 +318,7 @@
 									</div>
 								</div>
 									</div>
-						<div class="clean-about-image-container">
-										<div class="about-me-text-block">
-											Great Basin National Park, NV
-										</div>
+						<div class="clean-about-image-container pixel-field">
 										<img
 											src="images/GreatBasinBristol.jpg"
 											loading="lazy"
@@ -333,6 +331,7 @@
 								sizes="(max-width: 991px) 100vw, 938.3333129882812px"
 								class="clean-about-image"
 										/>
+										<canvas class="pixel-field-canvas" aria-hidden="true"></canvas>
 						</div>
 					</div>
 				</div>
@@ -731,6 +730,7 @@
 				}
 			})();
 		</script>
+		<script src="js/pixel-field.js?v=nowave"></script>
 
 	</body>
 </html>
