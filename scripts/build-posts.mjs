@@ -110,7 +110,7 @@ function postPage(post) {
 		<link href="../../css/normalize.css" rel="stylesheet" type="text/css" />
 		<link href="../../css/webflow.css" rel="stylesheet" type="text/css" />
 		<link href="../../css/connor-freelance-portfolio-23-24.webflow.css" rel="stylesheet" type="text/css" />
-		<link href="../../css/light-theme.css?v=photo-invert-2" rel="stylesheet" type="text/css" />
+		<link href="../../css/light-theme.css?v=bio-home-left" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -126,6 +126,7 @@ function postPage(post) {
 		<div class="page-wrapper">
 			<nav class="navigation">
 				<div class="container navigation w-container">
+					<a href="../../index.html#thoughts-section" class="bio-nav-back">← Blog</a>
 					<a href="../../index.html" class="logo-link-block w-nav-brand" aria-label="Connor Barrett - Home">
 						<img src="../../images/Logo.svg" loading="lazy" alt="Connor Barrett Logo" class="logo" />
 					</a>
@@ -135,7 +136,6 @@ function postPage(post) {
 							<cite id="nav-quote-author" class="nav-quote-author"></cite>
 						</blockquote>
 					</div>
-					<a href="../../index.html#thoughts-section" class="bio-nav-back">← Blog</a>
 				</div>
 			</nav>
 
