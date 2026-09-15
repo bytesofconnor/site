@@ -753,6 +753,22 @@ nav.navigation,
   transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
+#work-section .project-item[data-project="vizzy"] {
+  --project-border: linear-gradient(160deg, #2c4a5e 0%, #7aa3b8 48%, #c4a46a 100%);
+}
+
+#work-section .project-item[data-project="vizzy"]:hover {
+  box-shadow: 0 0 0 1px color-mix(in srgb, #4e7a90 26%, transparent);
+}
+
+#work-section .project-item[data-project="vizzy"] .project-item-link {
+  color: #3f6a7e;
+}
+
+#work-section .project-item[data-project="vizzy"] .project-item-link:hover {
+  color: #2c4a5e;
+}
+
 #work-section .project-item[data-project="pinkys"] {
   --project-border: linear-gradient(125deg, #c45a78 0%, #e8b4c4 45%, #8b4a62 100%);
 }
