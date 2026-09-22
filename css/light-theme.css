@@ -769,6 +769,22 @@ nav.navigation,
   color: #2c4a5e;
 }
 
+#work-section .project-item[data-project="recipebook"] {
+  --project-border: linear-gradient(145deg, #6b3218 0%, #c4a46a 50%, #4a2418 100%);
+}
+
+#work-section .project-item[data-project="recipebook"]:hover {
+  box-shadow: 0 0 0 1px color-mix(in srgb, #6b3218 26%, transparent);
+}
+
+#work-section .project-item[data-project="recipebook"] .project-item-link {
+  color: #7a3f24;
+}
+
+#work-section .project-item[data-project="recipebook"] .project-item-link:hover {
+  color: #6b3218;
+}
+
 #work-section .project-item[data-project="pinkys"] {
   --project-border: linear-gradient(125deg, #c45a78 0%, #e8b4c4 45%, #8b4a62 100%);
 }
